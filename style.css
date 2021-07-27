@@ -1,0 +1,22 @@
+body
+{
+    font-family: 'Baloo Chettan 2', cursive;
+}
+.heading{
+    background: #1f4037;  
+    background: -webkit-linear-gradient(to right, #99f2c8, #1f4037);  
+    background: linear-gradient(to right, #99f2c8, #1f4037); 
+    
+}
+#inst{
+    float: right;
+}
+#strt{
+    height: 50px;
+    width: 110px;
+    font-size: 20px;
+    background: #2193b0;  
+background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  
+background: linear-gradient(to right, #6dd5ed, #2193b0); 
+
+}
