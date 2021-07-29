@@ -20,3 +20,14 @@ background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
 background: linear-gradient(to right, #6dd5ed, #2193b0); 
 
 }
+.footer{
+    
+    position: fixed;
+    width: 100%;
+    color:black;
+    border: 5px solid red;
+    background-color: lightblue;
+    line-height: 3;
+    text-align: center;
+    bottom: 0;
+}
