@@ -1,4 +1,6 @@
-
+rightWristX="";
+rightWristY="";
+Score="";
 
 
 var paddle2 =10,paddle1=10;
@@ -27,15 +29,28 @@ function setup(){
   video=createCapture(VIDEO)
   video.hide();
 poseNet=ml5.poseNet(video,modelLoaded);
+poseNet.on('pose',gotPoses);
   
 }
 function modelLoaded(){
 console.log('PoseNet is initialized')
 }
-
+function gotPoses(results){
+if(results.length>0){
+  rightWristX=results[0].pose.rightWrist.x;
+  rightWristY=results[0].pose.rightWrist.y;
+  Score=results;
+}
+}
 function draw(){
 image(video,0,0,700,600);
-
+if(Score>0.2){
+  r=random(255);
+  g=random(255);
+  b=random(255);
+  fill(r,g,b)
+  circle(rightWristX,rightWristY,10)
+}
 
  background(0); 
 
@@ -46,6 +61,7 @@ image(video,0,0,700,600);
  fill("black");
  stroke("black");
  rect(0,0,20,700);
+
  
    //funtion paddleInCanvas call 
    paddleInCanvas();
